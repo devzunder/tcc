@@ -1,16 +1,21 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(185deg, #354966 15%, #4d4981 100%);
 }
 
-.App-logo {
+.react-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
 }
 
+* {
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.5s;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
