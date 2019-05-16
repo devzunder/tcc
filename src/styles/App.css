@@ -1,14 +1,10 @@
 .App-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
   color: black;
   min-height: 80vh;
+  text-align: center;
 }
+
 .App {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   text-align: center;
   font-family: sofia-pro, sans-serif;
@@ -20,11 +16,19 @@
   transition-duration: 0.5s;
   list-style-type: none;
   text-decoration: none;
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Nunito Sans", sans-serif;
 }
 .list {
   margin: 0;
   padding: 0;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+}
+
+.btn-dash {
+  margin-top: 5%;
 }
 
 @keyframes App-logo-spin {

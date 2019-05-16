@@ -4,7 +4,7 @@
   box-shadow: 1px 1px 5px grey;
 }
 
-.form {
+.Form {
   margin: 2%;
   align-items: center;
   position: relative;
@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.form input {
+.Form input {
   box-shadow: 0 0 1em grey;
   border: 0px;
   height: 30px;
@@ -23,11 +23,11 @@
   border-radius: 2%;
 }
 
-.form input:hover {
+.Form input:hover {
   box-shadow: 0 0 1em #354966;
 }
 
-.form input:focus {
+.Form input:focus {
   box-shadow: 0 0 1em #f45567;
 }
 

@@ -19,10 +19,14 @@ function New(props) {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="Form" onSubmit={handleSubmit}>
       <Input name="name" placeholder="Nome do Sistema" type="text" />
       <Scope path="data">
-        <Input name="tanques" placeholder="Nº de Tanques" />
+        <Input
+          className="kickass_field"
+          name="tanques"
+          placeholder="Nº de Tanques"
+        />
         <Input name="volume" placeholder="Volume Unitário (m³)" />
         <Input name="densidade" placeholder="Densidade  " />
         <Input name="peso" placeholder="Peso Final" />

@@ -1,12 +1,15 @@
 import React from "react";
 import "../styles/Header.css";
 import { NavLink } from "react-router-dom";
-import { Layout, Menu } from "antd";
-const { Header } = Layout;
+import { Menu } from "antd";
+import Logo from "../logo.svg";
 
 const Head = () => {
   return (
-    <header>
+    <header className="row">
+      <div className="logo">
+        <img src={Logo} style={{ width: 100 }} />
+      </div>
       <Menu
         theme="light"
         mode="horizontal"
@@ -20,9 +23,6 @@ const Head = () => {
           <NavLink to="/about">Sobre</NavLink>
         </Menu.Item>
       </Menu>
-      <NavLink className="btn" to="/new">
-        Dimensionar
-      </NavLink>
     </header>
   );
 };
