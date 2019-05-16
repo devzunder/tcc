@@ -1,88 +1,40 @@
 import React, { Component } from "react";
+import { Form, Input, Scope } from "@rocketseat/unform";
 import "../styles/New.css";
 import { connect } from "react-redux";
 import { handleAddProject } from "../actions/projects";
+import { Link } from "react-router-dom";
 
-class New extends Component {
-  state = {};
-  sendData = data => {
-    data.preventDefault();
-    const { dispatch } = this.props;
-    dispatch(handleAddProject(this.state));
-  };
-  handleChange = name => e => {
-    if (name !== "name") {
-      this.setState({
-        [name]: parseFloat(e.target.value)
-      });
-    } else {
-      this.setState({
-        [name]: e.target.value
-      });
-    }
-  };
-
-  render() {
-    return (
-      <div className="container">
-        <h1>Formulário</h1>
-        <form className="form">
-          <input
-            type="text"
-            id="name"
-            placeholder="Nome do Sistema"
-            onChange={this.handleChange("name")}
-            required
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Nº de Tanques"
-            onChange={this.handleChange("tanques")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Volume Unitário (m³)"
-            onChange={this.handleChange("volume")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Densidade  "
-            onChange={this.handleChange("densidade")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Peso Final"
-            onChange={this.handleChange("peso")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Taxa de Arraçoamento"
-            onChange={this.handleChange("taxa")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Conversão Alimentar"
-            onChange={this.handleChange("ca")}
-          />
-          <input
-            type="text"
-            id="name"
-            placeholder="Taxa de Recirculação"
-            onChange={this.handleChange("recirc")}
-          />
-          <br />
-          <button type="submit" onClick={this.sendData}>
-            Dimensionar
-          </button>
-        </form>
-      </div>
-    );
+function New(props) {
+  function handleSubmit(data) {
+    const { dispatch } = props;
+    dispatch(handleAddProject(data));
+    console.log(data);
+    /**
+     * {
+     *   email: 'email@example.com',
+     *   password: "123456"
+     * }
+     */
   }
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <Input name="name" placeholder="Nome do Sistema" type="text" />
+      <Scope path="data">
+        <Input name="tanques" placeholder="Nº de Tanques" />
+        <Input name="volume" placeholder="Volume Unitário (m³)" />
+        <Input name="densidade" placeholder="Densidade  " />
+        <Input name="peso" placeholder="Peso Final" />
+        <Input name="taxa" placeholder="Taxa de Arraçoamento" />
+        <Input name="ca" placeholder="Conversão Alimentar" />
+        <Input name="recirc" placeholder="Taxa de Recirculação" />
+      </Scope>
+      <button type="submit" class="btn">
+        Dimensionar
+      </button>
+    </Form>
+  );
 }
+
 export default connect()(New);

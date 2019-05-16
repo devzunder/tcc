@@ -9,7 +9,7 @@ export default function projects(state = [], action) {
     case RECEIVE_PROJECTS:
       return state;
     case DELETE_PROJECT:
-      return state.filter(projects => state.indexOf(projects) !== action.id);
+      return state.filter(projects => state.indexOf(projects) != action.id);
     case ADD_PROJECT:
       return state.concat([action.data]);
     default:

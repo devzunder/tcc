@@ -1,13 +1,16 @@
 .container {
-  position: flex;
-  min-height: 300px;
-  padding: 5%;
-  margin: 5%;
-  box-shadow: 0 0 1em grey;
+  padding-bottom: 2%;
+  max-width: 350px;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .form {
   margin: 2%;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  text-align: center;
 }
 
 .form input {
@@ -25,20 +28,21 @@
 }
 
 .form input:focus {
-  box-shadow: 0 0 1em #F45567;
+  box-shadow: 0 0 1em #f45567;
 }
 
-button, .btn {
+.btn {
   padding: 10px;
-  background-color: #F45567;
+  background-color: #f45567;
   border: 0px;
   box-shadow: 2px 2px 2px grey;
   color: white;
   border-radius: 2%;
 }
 
-button:hover, .btn:hover {
-  background-color: #EBB3BB
+button:hover,
+.btn:hover {
+  background-color: #ebb3bb;
 }
 
 @media screen and (max-width: 1024px) {

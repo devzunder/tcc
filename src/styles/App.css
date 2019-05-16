@@ -1,31 +1,30 @@
-.App {
+.App-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
-  background-image: linear-gradient(185deg, #354966 15%, #4d4981 100%);
+  color: black;
+  min-height: 80vh;
 }
-
-.react-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 50px;
-  pointer-events: none;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  font-family: sofia-pro, sans-serif;
+  color: black;
 }
 
 * {
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.5s;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Shadows Into Light", cursive;
 }
-
-.App-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.list {
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes App-logo-spin {

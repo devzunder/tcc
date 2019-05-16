@@ -1,6 +1,7 @@
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const DELETE_PROJECT = "DELETE_PROJECT";
 export const ADD_PROJECT = "ADD_PROJECT";
+export const EDIT_PROJECT = "EDIT_PROJECT";
 
 export function receiveProjects(projects) {
   return {
@@ -25,6 +26,12 @@ export function handleDeleteProject(id) {
 export function addProject(data) {
   return {
     type: ADD_PROJECT,
+    data
+  };
+}
+export function editProject(data) {
+  return {
+    type: EDIT_PROJECT,
     data
   };
 }

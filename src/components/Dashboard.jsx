@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Memorial from "./Memorial.jsx";
-import { NavLink } from "react-router-dom";
+import Project from "./Project.jsx";
 
-class Projects extends Component {
+class Dashboard extends Component {
   render() {
+    console.log(this.props.projectsIds);
     return (
       <div>
-        <NavLink className="btn" type="submit" to="/new">
-          Dimensionar
-        </NavLink>
-        <ul className="list">
+        <ul className="list row">
           {this.props.projectsIds.map(id => (
             <li key={id}>
-              <Memorial id={id}>${id}</Memorial>
+              <Project id={id} key={id} />
             </li>
           ))}
         </ul>
@@ -27,4 +24,4 @@ function mapStateToProps({ projects }) {
     projectsIds: Object.keys(projects)
   };
 }
-export default connect(mapStateToProps)(Projects);
+export default connect(mapStateToProps)(Dashboard);

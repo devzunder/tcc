@@ -4,6 +4,7 @@ import "../styles/Footer.css";
 const Footer = props => {
   return (
     <footer className="footer">
+      <hr />
       <div className="icons-social">
         <a
           className="hvr-float-shadow"
@@ -38,7 +39,7 @@ const Footer = props => {
             ❤️
           </span>{" "}
           by{" "}
-          <a href="/" style={{ color: "white" }}>
+          <a href="/" style={{ color: "black" }}>
             DevZunder
           </a>
         </p>

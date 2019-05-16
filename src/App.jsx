@@ -1,30 +1,35 @@
 import React, { Component, Fragment } from "react";
-import logo from "./logo.svg";
-import Header from "./components/Header";
+import Head from "./components/Header";
+//import { handleInitialData } from "../actions/shared";
 import "./styles/App.css";
+import "./styles/hover-min.css";
 import New from "./components/New.jsx";
 import Footer from "./components/Footer.jsx";
 import Memorial from "./components/Memorial.jsx";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Projects from "./components/Projects";
+import Dashboard from "./components/Dashboard";
+import { handleAddProject } from "./actions/projects";
 
 class App extends Component {
+  /*componentDidMount() {
+    this.props.dispatch(handleInitialData());
+  }*/
   render() {
     return (
-      <Router>
-        <Fragment>
+      <Fragment>
+        <Router>
           <div className="App">
-            <Header />
-            <div>
-              <Route path="/" exact component={Projects} />
-              <Route path="/memorial/:id" component={Memorial} />
+            <Head />
+            <div className="App-body">
+              <Route path="/" exact component={Dashboard} />
+              <Route path="/project/:id" component={Memorial} />
               <Route path="/new" component={New} />
             </div>
             <Footer />
           </div>
-        </Fragment>
-      </Router>
+        </Router>
+      </Fragment>
     );
   }
 }
