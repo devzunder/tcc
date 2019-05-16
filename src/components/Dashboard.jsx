@@ -18,15 +18,9 @@ class Dashboard extends Component {
           <div>
             <ul className="list">
               {this.props.projectsIds.map(id => (
-                <Col
-                  sm={{ span: 9, offset: 2 }}
-                  lg={{ span: 6, offset: 2 }}
-                  md={{ span: 7, offset: 2 }}
-                >
-                  <li key={id}>
-                    <Project id={id} key={id} />
-                  </li>
-                </Col>
+                <li key={id}>
+                  <Project id={id} key={id} />
+                </li>
               ))}
             </ul>
           </div>

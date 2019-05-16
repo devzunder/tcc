@@ -4,11 +4,24 @@ import "../styles/New.css";
 import { connect } from "react-redux";
 import { handleAddProject } from "../actions/projects";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function New(props) {
   function handleSubmit(data) {
     const { dispatch } = props;
-    dispatch(handleAddProject(data));
+    try {
+      dispatch(handleAddProject(data));
+    } catch (err) {
+      console.warn("Deu erro ", err);
+    } finally {
+      Swal.fire({
+        position: "top-end",
+        type: "success",
+        title: "Seu dimensionamento foi gerado com sucesso",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
     console.log(data);
     /**
      * {
