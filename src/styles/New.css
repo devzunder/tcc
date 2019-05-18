@@ -1,12 +1,50 @@
 .container {
+  margin-top: 2%;
   padding-bottom: 2%;
-  max-width: 350px;
-  box-shadow: 1px 1px 5px grey;
+  width: 20%;
+  margin-left: 40%;
+  position: flex;
+  background-color: white;
+  box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+}
+
+@media only screen and (max-device-width: 1250px) {
+  .container {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    width: 33%;
+    margin-left: 33%;
+    position: flex;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+  }
+}
+@media only screen and (max-device-width: 700px) {
+  .container {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
+    margin-left: 25%;
+    position: flex;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+  }
+}
+@media only screen and (max-device-width: 500px) {
+  .container {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    width: 80%;
+    margin-left: 10%;
+    position: flex;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+  }
 }
 
 .Form {
   margin: 2%;
-  align-items: center;
+
   position: relative;
   z-index: 1;
   max-width: 360px;
@@ -14,7 +52,7 @@
 }
 
 .Form input {
-  box-shadow: 0 0 1em grey;
+  box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
   border: 0px;
   height: 30px;
   position: flex;
@@ -23,19 +61,24 @@
   border-radius: 2%;
 }
 
-.Form input:hover {
-  box-shadow: 0 0 1em #354966;
+.container h3 {
+  padding-top: 5%;
+  font-weight: bold;
 }
 
 .Form input:focus {
-  box-shadow: 0 0 1em #f45567;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  width: 80%;
+  border-radius: 10%;
 }
 
 .btn {
   padding: 10px;
   background-color: #f45567;
+  width: 70%;
   border: 0px;
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 0.5px 0.5px 5px black;
   color: white;
   border-radius: 2%;
 }
@@ -43,6 +86,9 @@
 button:hover,
 .btn:hover {
   background-color: #ebb3bb;
+  box-shadow: 0 0 0 white;
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 1024px) {

@@ -1,7 +1,11 @@
-nav {
-  text-decoration: none;
+header {
+  width: 100%;
+  text-align: center;
 }
-
-nav li {
-  list-style-type: none;
+nav a {
+  padding: 2%;
+  width: 70%;
+  font-weight: bold;
+  font-size: 15pt;
+  color: white;
 }

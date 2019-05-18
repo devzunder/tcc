@@ -1,22 +1,20 @@
 .App-body {
   color: black;
-  min-height: 80vh;
+  min-height: 70vh;
   text-align: center;
 }
 
 .App {
   min-height: 100vh;
-  text-align: center;
   font-family: sofia-pro, sans-serif;
   color: black;
+  background-image: linear-gradient(185deg, #354966 10%, #63a2ff 100%);
 }
 
 * {
-  -webkit-transition-duration: 0.8s;
-  transition-duration: 0.5s;
   list-style-type: none;
   text-decoration: none;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 .list {
   margin: 0;
@@ -37,5 +35,45 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container-memorial {
+  margin-top: 2%;
+  padding: 2%;
+  width: 60%;
+  margin-left: 20%;
+  background-color: white;
+  box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+}
+
+@media only screen and (max-device-width: 1250px) {
+  .container-memorial {
+    margin-top: 2%;
+    padding: 2%;
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+  }
+}
+@media only screen and (max-device-width: 700px) {
+  .container-memorial {
+    margin-top: 2%;
+    padding: 2%;
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
+  }
+}
+@media only screen and (max-device-width: 500px) {
+  .container-memorial {
+    margin-top: 2%;
+    padding: 2%;
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 15px rgb(80, 80, 80);
   }
 }

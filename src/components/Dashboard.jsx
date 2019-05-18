@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import Project from "./Project.jsx";
-import { Row, Col } from "antd";
 import { NavLink } from "react-router-dom";
 
 class Dashboard extends Component {
@@ -14,17 +13,13 @@ class Dashboard extends Component {
             Dimensionar
           </NavLink>
         </div>
-        <Row type="flex" justify="center" align="top">
-          <div>
-            <ul className="list">
-              {this.props.projectsIds.map(id => (
-                <li key={id}>
-                  <Project id={id} key={id} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Row>
+        <div>
+          <ul className="list">
+            {this.props.projectsIds.map(id => (
+              <Project id={id} key={id} />
+            ))}
+          </ul>
+        </div>
       </Fragment>
     );
   }

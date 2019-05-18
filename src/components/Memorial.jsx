@@ -6,24 +6,76 @@ class Memorial extends Component {
   render() {
     const state = this.props;
     const memorial = state.state.projects[state.match.params.id];
-    console.log(memorial);
+    const data = {
+      name: memorial.name,
+      tanques: parseFloat(memorial.data.tanques),
+      volume: parseFloat(memorial.data.volume),
+      densidade: parseFloat(memorial.data.densidade),
+      peso: parseFloat(memorial.data.peso),
+      taxa: parseFloat(memorial.data.taxa),
+      ca: parseFloat(memorial.data.ca),
+      recirc: parseFloat(memorial.data.recirc)
+    };
+    console.log(data);
     return (
       <div>
-        Nome: {memorial.name}
-        <br />
-        Número de tanques: {memorial.data.tanques}
-        <br />
-        Volume: {memorial.data.volume}
-        <br />
-        Densidade: {memorial.data.densidade}
-        <br />
-        Peso Final: {memorial.data.peso}
-        <br />
-        Taxa de Arraçoamento: {memorial.data.taxa}
-        <br />
-        Conversão Alimentar: {memorial.data.ca}
-        <br />
-        Taxa de Recirculação: {memorial.data.recirc}
+        <div className="container-memorial">
+          <h3>Dados inseridos</h3>
+          <br />
+          Nome: {memorial.name}
+          <br />
+          Número de tanques: {data.tanques}
+          <br />
+          Volume: {data.volume}
+          <br />
+          Densidade: {data.densidade}
+          <br />
+          Peso Final: {data.peso}
+          <br />
+          Taxa de Arraçoamento: {data.taxa}
+          <br />
+          Conversão Alimentar: {data.ca}
+          <br />
+          Taxa de Recirculação: {data.recirc}
+        </div>
+        <div className="container-memorial">
+          <h3>Dados inseridos</h3>
+          <br />
+          Nome: {memorial.name}
+          <br />
+          Número de tanques: {data.tanques}
+          <br />
+          Volume: {data.volume}
+          <br />
+          Densidade: {data.densidade}
+          <br />
+          Peso Final: {data.peso}
+          <br />
+          Taxa de Arraçoamento: {data.taxa}
+          <br />
+          Conversão Alimentar: {data.ca}
+          <br />
+          Taxa de Recirculação: {data.recirc}
+        </div>
+        <div className="container-memorial">
+          <h3>Dados inseridos</h3>
+          <br />
+          Nome: {memorial.name}
+          <br />
+          Número de tanques: {data.tanques}
+          <br />
+          Volume: {data.volume}
+          <br />
+          Densidade: {data.densidade}
+          <br />
+          Peso Final: {data.peso}
+          <br />
+          Taxa de Arraçoamento: {data.taxa}
+          <br />
+          Conversão Alimentar: {data.ca}
+          <br />
+          Taxa de Recirculação: {data.recirc}
+        </div>
       </div>
     );
   }
