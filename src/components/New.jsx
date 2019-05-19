@@ -42,11 +42,11 @@ function New(props) {
             placeholder="Nº de Tanques"
           />
           <Input name="volume" placeholder="Volume Unitário (m³)" />
-          <Input name="densidade" placeholder="Densidade " />
+          <Input name="densidade" placeholder="Densidade (kg/m³)" />
           <Input name="peso" placeholder="Peso Final" />
-          <Input name="taxa" placeholder="Taxa de Arraçoamento" />
-          <Input name="ca" placeholder="Conversão Alimentar" />
-          <Input name="recirc" placeholder="Taxa de Recirculação" />
+          <Input name="taxa" placeholder="Taxa de Arraçoamento (%)" />
+          <Input name="ca" placeholder="Conversão Alimentar (x:1)" />
+          <Input name="recirc" placeholder="Taxa de Recirculação (x/hora)" />
         </Scope>
         <button type="submit" class="btn">
           Dimensionar
