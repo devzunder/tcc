@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@matejmazur/react-katex": "^3.0.2",
     "@rocketseat/unform": "^1.0.1",
     "antd": "^3.18.1",
+    "katex": "^0.10.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-katex": "^2.0.2",
     "react-redux": "^7.0.2",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
