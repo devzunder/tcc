@@ -153,16 +153,16 @@ const Producao = props => {
       <br />
       <TeX block>{_`
         \begin{pmatrix}
-           &  & Sedimenta  &  \to & ${props.solTotGer / 2}   kg  \\
+           & Sedimenta    \to  ${props.solTotGer / 2}   kg  \\
            & \nearrow  \\
         ${
           props.solTotGer
-        } kg de ST  &  &  &   & Retidos No Filtro &\to & ${props.solTotGer /
+        } kg de ST  &  &  &   & Retidos No Filtro \to  ${props.solTotGer /
         4}   kg  \\
-           & \searrow &  & \nearrow  &  &  \\
-           &  & Suspenção  &   &  &  \\
-           &  &   & \searrow  &  &  \\
-           &  &   &   & Dissolvidos & \to& ${props.solTotGer / 4}   kg \\ 
+           & \searrow &   \nearrow  &  &  \\
+           &   Suspenção  &   &  &  \\
+           &  & \searrow  &  &  \\
+           &  &   &   & Dissolvidos  \to ${props.solTotGer / 4}   kg \\ 
         \end{pmatrix}
         `}</TeX>
       <br />
@@ -198,9 +198,13 @@ const Producao = props => {
       </h4>
       <br />
       <br />A vazão do sistema é calculada multiplicando o volume do sistema (
-      {props.volumeTotal} m³) pela taxa de recirculão, considerada neste caso{" "}
-      {props.initialData.recirc}
-      vezes/hora:
+      <strong>{props.volumeTotal} m³</strong>) pela taxa de recirculação,
+      considerada neste caso{" "}
+      <strong>
+        {props.initialData.recirc}
+        vezes/hora
+      </strong>
+      :
       <TeX
         math={_`Vazão = ${props.volumeTotal} * ${props.initialData.recirc} = ${
           props.vazao

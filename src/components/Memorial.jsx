@@ -5,7 +5,6 @@ import { Table, Tabs } from "antd";
 import "katex/dist/katex.min.css";
 import Producao from "./Producao";
 import Residuos from "./Residuos";
-import { NavLink } from "react-router-dom";
 import Aeracao from "./Aeracao";
 
 class Memorial extends Component {
@@ -101,9 +100,6 @@ class Memorial extends Component {
             ]}
             size="middle"
           />
-          <NavLink className="btn" to="/new" initialData={initialData}>
-            Editar Dados
-          </NavLink>
         </div>
         <div className="container-memorial">
           <h2>

@@ -21,13 +21,9 @@ function New(props) {
         timer: 1500
       });
     }
-    console.log(data);
-    /**
-     * {
-     *   email: 'email@example.com',
-     *   password: "123456"
-     * }
-     */
+    setTimeout(function() {
+      props.history.push(`/`);
+    }, 1500);
   }
 
   return (
@@ -36,19 +32,15 @@ function New(props) {
       <Form className="Form" onSubmit={handleSubmit}>
         <Input name="name" placeholder="Nome do Sistema" type="text" />
         <Scope path="data">
-          <Input
-            className="kickass_field"
-            name="tanques"
-            placeholder="Nº de Tanques"
-          />
+          <Input name="tanques" placeholder="Nº de Tanques" />
           <Input name="volume" placeholder="Volume Unitário (m³)" />
           <Input name="densidade" placeholder="Densidade (kg/m³)" />
-          <Input name="peso" placeholder="Peso Final" />
-          <Input name="taxa" placeholder="Taxa de Arraçoamento (%)" />
-          <Input name="ca" placeholder="Conversão Alimentar (x:1)" />
-          <Input name="recirc" placeholder="Taxa de Recirculação (x/hora)" />
+          <Input name="peso" placeholder="Peso Final (kg)" />
+          <Input name="taxa" placeholder="Taxa de Arraçoamento ( % )" />
+          <Input name="ca" placeholder="Conversão Alimentar ( x:1 )" />
+          <Input name="recirc" placeholder="Taxa de Recirculação ( x/hora )" />
         </Scope>
-        <button type="submit" class="btn">
+        <button type="submit" className="btn">
           Dimensionar
         </button>
       </Form>

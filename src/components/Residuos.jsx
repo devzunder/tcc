@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Table } from "antd";
 
 const Residuos = props => {
-  const _ = String.raw;
   const areaFiltro =
     (props.vazao * 24) /
     ((props.nh3Ger / 0.0003) * (props.nh3Ger / 0.0003 / 1690));
@@ -22,7 +21,7 @@ const Residuos = props => {
       <br />
       <br />
       Sendo assim a área necessária para o biofiltro é de{" "}
-      <strong>{props.nh3Ger / 0.0003} </strong>m2.
+      <strong>{props.nh3Ger / 0.0003} m2</strong>.
       <br />
       <br />
       Um substrato para fornecer área de superfície para bactérias nitrificantes

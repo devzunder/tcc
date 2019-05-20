@@ -9,8 +9,9 @@ const Aeracao = props => {
         <strong> DIMENSIONAMENTO DA DEMANDA DE AERAÇÃO </strong>
       </h3>
       Sabemos que 1 Kg de peixe consome o equivalente a 0,2 g de oxigênio por
-      hora. Sendo a quantidade máxima de peixes é de {props.numPeixes} no
-      sistema ({props.densidadeTotal} Kg), teríamos um consumo total de:
+      hora. Sendo a quantidade máxima de peixes é de{" "}
+      <strong>{props.numPeixes}</strong> no sistema (
+      <strong>{props.densidadeTotal} Kg</strong>), teríamos um consumo total de:
       <br />
       <br />
       <TeX
@@ -20,16 +21,19 @@ const Aeracao = props => {
         block
       />
       <br />
-      <br />O que equivale a {props.consumoO2Peixes / 1000} kg de O2/hora.
+      <br />O que equivale a{" "}
+      <strong>{props.consumoO2Peixes / 1000} kg de O2/hora</strong>.
       Multiplicando esse valor por 24 (horas/dia) temos o consumo diária de{" "}
-      {(props.consumoO2Peixes * 24) / 1000} Kg O2/dia.
+      <strong>{(props.consumoO2Peixes * 24) / 1000} Kg O2/dia</strong>.
       <br />
-      <br />O manejo alimentar adotado ({props.aliDiaria} Kg ração/dia) consome{" "}
-      {props.consumoO2} kg de O2/dia. Assim, teremos um consumo diário total de:
+      <br />O manejo alimentar adotado (
+      <strong>{props.aliDiaria} Kg ração/dia</strong>) consome{" "}
+      <strong>{props.consumoO2} kg de O2/dia</strong>. Assim, teremos um consumo
+      diário total de:
       <br />
       <br />
       <TeX
-        math={_`Consumo Total = (${(props.consumoO2Peixes * 24) / 1000}+${
+        math={_`Consumo Total = ${(props.consumoO2Peixes * 24) / 1000}+${
           props.consumoO2
         } =
         ${props.consumoO2Total} Kg O2/dia`}
@@ -54,7 +58,8 @@ const Aeracao = props => {
         } kd O2/dia} {7,2 kg O2/HP}} = ${props.potencia} HP `}
         block
       />
-      <br /> Com a potência necessária de {props.potencia} HP <br />
+      <br /> Com a potência necessária de <strong>{props.potencia} HP </strong>
+      <br />
     </Fragment>
   );
 };

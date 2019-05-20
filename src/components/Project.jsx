@@ -56,7 +56,12 @@ class Project extends Component {
             <Icon type="delete" onClick={this.handleDelete} />
           ]}
         >
-          <Meta title={project.name} description="This is the description" />
+          <Meta
+            title={project.name}
+            description={`Sistema ${
+              project.data.tanques
+            } com tanques volume unitário de ${project.data.volume} m³`}
+          />
         </Card>
       </div>
     );
