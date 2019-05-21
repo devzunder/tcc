@@ -5,6 +5,7 @@ const Residuos = props => {
   const areaFiltro =
     (props.vazao * 24) /
     ((props.nh3Ger / 0.0003) * (props.nh3Ger / 0.0003 / 1690));
+
   const diametro = Math.sqrt((4 * areaFiltro) / 3.1416);
   const volumeFiltro = props.nh3Ger / 0.0003 / 1690;
   const alturaFiltro = 4 * (volumeFiltro / (3.1416 * Math.pow(diametro, 2)));

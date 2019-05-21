@@ -42,6 +42,11 @@
   }
 }
 
+label {
+  position: absolute;
+  left: 10px;
+}
+
 .Form {
   margin: 2%;
 
