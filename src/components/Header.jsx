@@ -8,7 +8,7 @@ const Head = () => {
     <header className="header">
       <img src={Logo} className="logo" alt="Logo Aquascript" />
       <nav>
-        <NavLink to="/">Inicio</NavLink>
+        <NavLink to="/">Início</NavLink>
         <NavLink to="/about">Sobre</NavLink>
       </nav>
     </header>
