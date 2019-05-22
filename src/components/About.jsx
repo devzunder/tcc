@@ -13,18 +13,17 @@ const About = () => {
         <strong>Sobre</strong>
       </h3>
       Ao verificar a lacuna de informações quanto a SRAs e a falta de softwares
-      especializados e voltados para dimensionamentos na área da aquicultura,
-      verificou-se a viabilidade do desenvolvimento de um software web para
-      dimensionamento de SRAs com ênfase no dimensionamento de biofiltros,
-      consumo de oxigênio e necessidade de aeração e da capacidade de produção.
+      especializados e voltados para a área da aquicultura, verificou-se a
+      viabilidade do desenvolvimento de um software web para dimensionamento de
+      SRAs com ênfase em biofiltros, consumo de oxigênio e necessidade de
+      aeração e da capacidade de produção.
       <br />
       <br /> Além desse mercado inexplorado que gerou a possibilidade do
       desenvolvimento do projeto, existe a motivação pessoal do autor que busca
       o desenvolvimento pessoal e profissional na área com o intuito de lançar
       novos produtos relacionados no mercado. Assim o projeto tem por foco, o
       desenvolvimento completo de um software capaz de gerar um memorial de
-      cálculo completo e de fácil leitura ao produtor independente da
-      experiência.
+      cálculo de fácil leitura ao produtor independente da experiência.
       <br />
       <br />
       O projeto aborda uma área inexplorada no Departamento de Aquicultura da
