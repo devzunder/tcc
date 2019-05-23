@@ -54,7 +54,7 @@ const Residuos = props => {
           {
             key: "3",
             name: "Área superficial específica",
-            value: "1690m²/m³"
+            value: "1690 m²/m³"
           }
         ]}
       />
@@ -83,7 +83,7 @@ const Residuos = props => {
           {
             key: "1",
             name: 0.03 * props.aliDiaria,
-            value: "kg de TAN/dia"
+            value: " kg de TAN/dia"
           },
           {
             key: "2",
