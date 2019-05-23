@@ -66,7 +66,7 @@ const Producao = props => {
           {
             key: "3",
             name: "Densidade Total",
-            value: props.densidadeTotal + "kg"
+            value: props.densidadeTotal + " kg"
           },
           {
             key: "4",
@@ -76,22 +76,22 @@ const Producao = props => {
           {
             key: "5",
             name: "Densidade",
-            value: props.initialData.densidade + "kg/m³"
+            value: props.initialData.densidade + " kg/m³"
           },
           {
             key: "6",
             name: "Densidade / Tanque",
-            value: props.densidadeTanque + "kg/Tanque"
+            value: props.densidadeTanque + " kg/Tanque"
           },
           {
             key: "7",
             name: "Volume unitário",
-            value: props.initialData.volume + "m³"
+            value: props.initialData.volume + " m³"
           },
           {
             key: "8",
             name: "Taxa de Arraçoamento",
-            value: props.initialData.taxa + "%"
+            value: props.initialData.taxa + " %"
           },
           {
             key: "9",
