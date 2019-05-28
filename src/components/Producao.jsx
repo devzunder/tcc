@@ -100,7 +100,7 @@ const Producao = props => {
         size="middle"
       />
       Com o arraçoamento de <strong>{props.aliDiaria}</strong> kg por dia e
-      relacionando com os dados apresentados acima pode se chegar a seguinte
+      relacionando com os dados apresentados acima pode-se chegar a seguinte
       conclusão:
       <br />
       <br />
