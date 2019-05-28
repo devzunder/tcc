@@ -49,12 +49,12 @@ const Residuos = props => {
           {
             key: "2",
             name: "Diâmetro",
-            value: " 3cm³"
+            value: "3.00 cm³"
           },
           {
             key: "3",
             name: "Área superficial específica",
-            value: "1690 m²/m³"
+            value: "1690.00 m²/m³"
           }
         ]}
       />
@@ -112,37 +112,37 @@ const Residuos = props => {
           {
             key: "1",
             name: "Taxa de remoção de TAN",
-            value: "0,3 g de TAN/m²/dia"
+            value: "0.30 g de TAN/m²/dia"
           },
           {
             key: "2",
             name: "Área do filtro",
-            value: props.nh3Ger / 0.0003 + " m²"
+            value: (props.nh3Ger / 0.0003).toFixed(2) + " m²"
           },
           {
             key: "3",
             name: "Volume do filtro",
-            value: props.nh3Ger / 0.0003 / 1690 + " m³"
+            value: (props.nh3Ger / 0.0003 / 1690).toFixed(2) + " m³"
           },
           {
             key: "4",
             name: "Taxa de escoamento",
-            value: props.vazao * 24 + " m³/dia"
+            value: (props.vazao * 24).toFixed(2) + " m³/dia"
           },
           {
             key: "5",
             name: "Área (corte transversal)",
-            value: areaFiltro + " m²"
+            value: areaFiltro.toFixed(2) + " m²"
           },
           {
             key: "6",
             name: "Diâmetro",
-            value: diametro + " m"
+            value: diametro.toFixed(2) + " m"
           },
           {
             key: "7",
             name: "Altura",
-            value: alturaFiltro + " m"
+            value: alturaFiltro.toFixed(2) + " m"
           }
         ]}
         size="middle"

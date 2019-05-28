@@ -6,21 +6,24 @@ const Onboarding = props => {
   return (
     <div className="container-memorial" style={{ borderRadius: 20 }}>
       <img
+        className="tutorial"
         src={Step1}
         alt="Step1"
-        style={{ width: 340, padding: 5, borderRadius: 20 }}
+        style={{ padding: 5, borderRadius: 20 }}
       />
-      -
+
       <img
+        className="tutorial"
         src={Step2}
         alt="Step1"
-        style={{ width: 340, padding: 5, borderRadius: 20 }}
+        style={{ padding: 5, borderRadius: 20 }}
       />
-      -
+
       <img
+        className="tutorial"
         src={Step3}
         alt="Step1"
-        style={{ width: 340, padding: 5, borderRadius: 20 }}
+        style={{ padding: 5, borderRadius: 20 }}
       />
     </div>
   );

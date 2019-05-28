@@ -19,7 +19,7 @@ const About = () => {
       aeração e da capacidade de produção.
       <br />
       <br /> Além desse mercado inexplorado que gerou a possibilidade do
-      desenvolvimento do projeto, existe a motivação pessoal do autor que busca
+      desenvolvimento do projeto, existe a motivação pessoal do aluno que busca
       o desenvolvimento pessoal e profissional na área com o intuito de lançar
       novos produtos relacionados no mercado. Assim o projeto tem por foco, o
       desenvolvimento completo de um software capaz de gerar um memorial de
@@ -32,6 +32,25 @@ const About = () => {
       abordadas dentro de sala de aula.
       <br />
       <br />
+      Baseado na publicação do <strong>PhD. Fernando Kubitza</strong>, da edição
+      número 95 de maio/junho de 2006,{" "}
+      <strong>
+        “Sistemas de recirulação: Sistemas fechados com tratamento e reuso da
+        água”
+      </strong>
+      .
+      <br />
+      <br />
+      <br />
+      <center>
+        <h4>
+          {" "}
+          <strong>
+            Aquascript - Trabalho de conclusão de curso Lucas de Andrade Zunder
+            - Engenharia de Aquicultura - UFSC 2019
+          </strong>
+        </h4>
+      </center>
       <div className="logos">
         <hr />
         <img src={RC} alt="Logo React" style={{ width: 100, padding: 10 }} />

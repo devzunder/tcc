@@ -90,30 +90,23 @@ class Memorial extends Component {
               {
                 key: "7",
                 name: "Conversão Alimentar",
-                value: initialData.ca + ":1"
+                value: initialData.ca + " : 1"
               },
               {
                 key: "8",
                 name: "Taxa de Recirculação",
-                value: initialData.recirc + "x/hora"
+                value: initialData.recirc + " x/hora"
               }
             ]}
             size="middle"
           />
         </div>
         <div className="container-memorial">
-          <h2>
-            <strong>Memorial de cálculo</strong>{" "}
-          </h2>{" "}
-          <br />
-          Baseado na publicação do <strong>PhD. Fernando Kubitza</strong>, da
-          edição número 95 de maio/junho de 2006,{" "}
-          <strong>
-            “Sistemas de recirulação: Sistemas fechados com tratamento e reuso
-            da água”
-          </strong>
-          .
-          <br />
+          <center>
+            <h2>
+              <strong>Memorial de cálculo</strong>
+            </h2>
+          </center>{" "}
           <br />
           <Tabs defaultActiveKey="1" onChange={callback}>
             <TabPane tab="Capacidade de Produção" key="1">

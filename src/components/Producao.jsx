@@ -6,11 +6,9 @@ const Producao = props => {
   const _ = String.raw;
   return (
     <Fragment>
-      <br />
       <h3>
         <strong>DIMENSIONAMENTO DA CAPACIDADE DE PRODUÇÃO</strong>
       </h3>
-      <br />
       <Table
         columns={[
           {
@@ -56,17 +54,17 @@ const Producao = props => {
           {
             key: "1",
             name: "Volume Total",
-            value: props.volumeTotal + "m³"
+            value: props.volumeTotal.toFixed(2) + " m³"
           },
           {
             key: "2",
             name: "Densidade",
-            value: props.initialData.densidade + "kg/m³"
+            value: props.initialData.densidade.toFixed(2) + " kg/m³"
           },
           {
             key: "3",
             name: "Densidade Total",
-            value: props.densidadeTotal + " kg"
+            value: props.densidadeTotal.toFixed(2) + " kg"
           },
           {
             key: "4",
@@ -75,33 +73,28 @@ const Producao = props => {
           },
           {
             key: "5",
-            name: "Densidade",
-            value: props.initialData.densidade + " kg/m³"
+            name: "Densidade / Tanque",
+            value: props.densidadeTanque.toFixed(2) + " kg/Tanque"
           },
           {
             key: "6",
-            name: "Densidade / Tanque",
-            value: props.densidadeTanque + " kg/Tanque"
+            name: "Volume unitário",
+            value: props.initialData.volume.toFixed(2) + " m³"
           },
           {
             key: "7",
-            name: "Volume unitário",
-            value: props.initialData.volume + " m³"
+            name: "Taxa de Arraçoamento",
+            value: props.initialData.taxa * 100 + " % da biomassa"
           },
           {
             key: "8",
-            name: "Taxa de Arraçoamento",
-            value: props.initialData.taxa + " %"
+            name: "Taxa de Conversão Alimentar",
+            value: props.initialData.ca + " : 1"
           },
           {
             key: "9",
-            name: "Taxa de Conversão Alimentar",
-            value: props.initialData.ca + ":1"
-          },
-          {
-            key: "10",
             name: "Taxa de Recirculação",
-            value: props.initialData.recirc + "x/hora"
+            value: props.initialData.recirc + " x/hora"
           }
         ]}
         size="middle"
@@ -115,7 +108,7 @@ const Producao = props => {
       <Table
         columns={[
           {
-            title: props.aliDiaria + " kg de ração",
+            title: props.aliDiaria.toFixed(2) + " kg de ração",
             dataIndex: "name"
           },
           {
@@ -127,17 +120,17 @@ const Producao = props => {
           {
             key: "1",
             name: "Consome",
-            value: props.consumoO2 + " kg de 02"
+            value: props.consumoO2.toFixed(2) + " kg de 02"
           },
           {
             key: "2",
             name: "Gera",
-            value: props.solTotGer + " kg de ST"
+            value: props.solTotGer.toFixed(2) + " kg de ST"
           },
           {
             key: "3",
             name: "Gera",
-            value: props.nh3Ger + " kg de NH3"
+            value: props.nh3Ger.toFixed(2) + " kg de NH3"
           }
         ]}
       />
@@ -153,16 +146,19 @@ const Producao = props => {
       <br />
       <TeX block>{_`
         \begin{pmatrix}
-           & Sedimenta    \to  ${props.solTotGer / 2}   kg  \\
+           & Sedimenta    \to  ${(props.solTotGer / 2).toFixed(2)}   kg  \\
            & \nearrow  \\
-        ${
-          props.solTotGer
-        } kg de ST  &  &  &   & Retidos No Filtro \to  ${props.solTotGer /
-        4}   kg  \\
+        ${props.solTotGer.toFixed(
+          2
+        )} kg de ST  &  &  &   & Retidos No Filtro \to  ${(
+        props.solTotGer / 4
+      ).toFixed(2)}   kg  \\
            & \searrow &   \nearrow  &  &  \\
            &   Suspenção  &   &  &  \\
            &  & \searrow  &  &  \\
-           &  &   &   & Dissolvidos  \to ${props.solTotGer / 4}   kg \\ 
+           &  &   &   & Dissolvidos  \to ${(props.solTotGer / 4).toFixed(
+             2
+           )}   kg \\ 
         \end{pmatrix}
         `}</TeX>
       <br />
@@ -170,8 +166,9 @@ const Producao = props => {
       <h4>
         <strong>Produção Anual</strong>
       </h4>
-      Se adotarmos a taxa de arraçoamento diária de {props.initialData.taxa}% da
-      biomassa total e uma taxa de conversão alimentar de {props.initialData.ca}
+      Se adotarmos a taxa de arraçoamento diária de{" "}
+      {props.initialData.taxa * 100}% da biomassa total e uma taxa de conversão
+      alimentar de {props.initialData.ca}
       :1, podemos calcular a produção anual de organismos do sistema utilizando
       a seguinte fórmula:
       <br />
@@ -200,10 +197,7 @@ const Producao = props => {
       <br />A vazão do sistema é calculada multiplicando o volume do sistema (
       <strong>{props.volumeTotal} m³</strong>) pela taxa de recirculação,
       considerada neste caso{" "}
-      <strong>
-        {props.initialData.recirc}
-        vezes/hora
-      </strong>
+      <strong>{props.initialData.recirc} vezes/hora</strong>
       :
       <TeX
         math={_`Vazão = ${props.volumeTotal} * ${props.initialData.recirc} = ${

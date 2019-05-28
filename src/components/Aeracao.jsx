@@ -11,32 +11,36 @@ const Aeracao = props => {
       Sabemos que 1 Kg de peixe consome o equivalente a 0,2 g de oxigênio por
       hora. Sendo a quantidade máxima de peixes é de{" "}
       <strong>{props.numPeixes}</strong> no sistema (
-      <strong>{props.densidadeTotal} Kg</strong>), teríamos um consumo total de:
+      <strong>{props.densidadeTotal.toFixed(2)} Kg</strong>), teríamos um
+      consumo total de:
       <br />
       <br />
       <TeX
-        math={_`Consumo de O2 = 0.2 * ${props.densidadeTotal} = ${
-          props.consumoO2Peixes
-        }g de O2/hora`}
+        math={_`Consumo de O2 = 0.2 * ${props.densidadeTotal.toFixed(
+          2
+        )} = ${props.consumoO2Peixes.toFixed(2)}g de O2/hora`}
         block
       />
       <br />
       <br />O que equivale a{" "}
-      <strong>{props.consumoO2Peixes / 1000} kg de O2/hora</strong>.
-      Multiplicando esse valor por 24 (horas/dia) temos o consumo diária de{" "}
-      <strong>{(props.consumoO2Peixes * 24) / 1000} Kg O2/dia</strong>.
+      <strong>{(props.consumoO2Peixes / 1000).toFixed(2)} kg de O2/hora</strong>
+      . Multiplicando esse valor por 24 (horas/dia) temos o consumo diária de{" "}
+      <strong>
+        {((props.consumoO2Peixes * 24) / 1000).toFixed(2)} Kg O2/dia
+      </strong>
+      .
       <br />
       <br />O manejo alimentar adotado (
-      <strong>{props.aliDiaria} Kg ração/dia</strong>) consome{" "}
-      <strong>{props.consumoO2} kg de O2/dia</strong>. Assim, teremos um consumo
-      diário total de:
+      <strong>{props.aliDiaria.toFixed(2)} Kg ração/dia</strong>) consome{" "}
+      <strong>{props.consumoO2.toFixed(2)} kg de O2/dia</strong>. Assim, teremos
+      um consumo diário total de:
       <br />
       <br />
       <TeX
-        math={_`Consumo Total = ${(props.consumoO2Peixes * 24) / 1000}+${
-          props.consumoO2
-        } =
-        ${props.consumoO2Total} Kg O2/dia`}
+        math={_`Consumo Total = ${((props.consumoO2Peixes * 24) / 1000).toFixed(
+          2
+        )}+${props.consumoO2.toFixed(2)} =
+        ${props.consumoO2Total.toFixed(2)} Kg O2/dia`}
         block
       />
       <br />
@@ -53,12 +57,13 @@ const Aeracao = props => {
         block
       />
       <TeX
-        math={_`Potência (HP) = {\frac {${
-          props.consumoO2Total
-        } kd O2/dia} {7,2 kg O2/HP}} = ${props.potencia} HP `}
+        math={_`Potência (HP) = {\frac {${props.consumoO2Total.toFixed(
+          2
+        )} kd O2/dia} {7,2 kg O2/HP}} = ${props.potencia.toFixed(2)} HP `}
         block
       />
-      <br /> Com a potência necessária de <strong>{props.potencia} HP </strong>
+      <br /> Com a potência necessária de{" "}
+      <strong>{props.potencia.toFixed(2)} HP </strong>
       <br />
     </Fragment>
   );
