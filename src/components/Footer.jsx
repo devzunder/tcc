@@ -39,7 +39,12 @@ const Footer = props => {
             ❤️
           </span>{" "}
           by{" "}
-          <a href="/" style={{ color: "black" }}>
+          <a
+            href="https://www.linkedin.com/in/zunder/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "black" }}
+          >
             DevZunder
           </a>
         </p>

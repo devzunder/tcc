@@ -16,13 +16,13 @@ const Residuos = props => {
       </h3>
       A taxa de remoção de amônia no biofiltro é de 0,0003 kg de NH3/m²/dia.
       Sabendo que a produção de NH3 no sistema é de{" "}
-      <strong>{props.nh3Ger} </strong>
+      <strong>{props.nh3Ger.toFixed(2)} </strong>
       kg/dia, podemos calcular a área de biofiltro necessária para remover a
       amônia produzida por dia.
       <br />
       <br />
       Sendo assim a área necessária para o biofiltro é de{" "}
-      <strong>{props.nh3Ger / 0.0003} m2</strong>.
+      <strong>{(props.nh3Ger / 0.0003).toFixed(2)} m2</strong>.
       <br />
       <br />
       Um substrato para fornecer área de superfície para bactérias nitrificantes
@@ -63,11 +63,12 @@ const Residuos = props => {
       Podemos calcular o volume mínimo do biofiltro para remoção de toda matéria
       orgânica produzida, estabelecendo uma razão entre a área do biofiltro{" "}
       <strong>
-        {props.nh3Ger / 0.0003}
+        {(props.nh3Ger / 0.0003).toFixed(2)}
         m2
       </strong>{" "}
       e a área específica do bio-balls 1690 m2/m³. Deste modo o volume do
-      biofiltro é de <strong>{props.nh3Ger / 0.0003 / 1690}m³</strong>.
+      biofiltro é de{" "}
+      <strong>{(props.nh3Ger / 0.0003 / 1690).toFixed(2)}m³</strong>.
       <Table
         columns={[
           {
@@ -82,15 +83,17 @@ const Residuos = props => {
         dataSource={[
           {
             key: "1",
-            name: 0.03 * props.aliDiaria,
+            name: 0.03 * props.aliDiaria.toFixed(2),
             value: " kg de TAN/dia"
           },
           {
             key: "2",
             name: "TAN",
             value:
-              (0.03 * props.aliDiaria * 1000) / (24 * props.volumeTotal) +
-              " g/m³"
+              (
+                (0.03 * props.aliDiaria * 1000) /
+                (24 * props.volumeTotal)
+              ).toFixed(2) + " g/m³"
           }
         ]}
       />
