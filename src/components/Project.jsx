@@ -58,9 +58,9 @@ class Project extends Component {
         >
           <Meta
             title={project.name}
-            description={`Sistema ${
+            description={`Sistema com  ${
               project.data.tanques
-            } com tanques volume unitário de ${project.data.volume} m³`}
+            } tanques e volume unitário de ${project.data.volume} m³`}
           />
         </Card>
       </div>
