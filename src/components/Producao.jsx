@@ -63,7 +63,7 @@ const Producao = props => {
           },
           {
             key: "3",
-            name: "Densidade Total",
+            name: "Biomassa Total",
             value: props.densidadeTotal.toFixed(2) + " kg"
           },
           {
