@@ -84,7 +84,7 @@ const Producao = props => {
           {
             key: "7",
             name: "Taxa de Arraçoamento",
-            value: props.initialData.taxa * 100 + " % da biomassa"
+            value: props.initialData.taxa.toFixed(2) * 100 + " % da biomassa"
           },
           {
             key: "8",
@@ -168,7 +168,7 @@ const Producao = props => {
       </h4>
       Se adotarmos a taxa de arraçoamento diária de{" "}
       {props.initialData.taxa * 100}% da biomassa total e uma taxa de conversão
-      alimentar de {props.initialData.ca}
+      alimentar de {props.initialData.ca.toFixed(2)}
       :1, podemos calcular a produção anual de organismos do sistema utilizando
       a seguinte fórmula:
       <br />
