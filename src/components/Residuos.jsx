@@ -2,19 +2,16 @@ import React, { Fragment } from "react";
 import { Table } from "antd";
 
 const Residuos = props => {
-  const areaFiltro =
-    (props.vazao * 24) /
-    ((props.nh3Ger / 0.0003) * (props.nh3Ger / 0.0003 / 1690));
+  const area = (props.nh3Ger / 0.001) * 2;
 
-  const diametro = Math.sqrt((4 * areaFiltro) / 3.1416);
-  const volumeFiltro = props.nh3Ger / 0.0003 / 1690;
-  const alturaFiltro = 4 * (volumeFiltro / (3.1416 * Math.pow(diametro, 2)));
+  const volumeFiltro = area / 1690;
+
   return (
     <Fragment>
       <h3>
         <strong> DIMENSIONAMENTO DO FILTRO BIOLÓGICO</strong>
       </h3>
-      A taxa de remoção de amônia no biofiltro é de 0,0003 kg de NH3/m²/dia.
+      A taxa de remoção de amônia no biofiltro é de 0,001 kg de NH3/m²/dia.
       Sabendo que a produção de NH3 no sistema é de{" "}
       <strong>{props.nh3Ger.toFixed(2)} </strong>
       kg/dia, podemos calcular a área de biofiltro necessária para remover a
@@ -22,7 +19,8 @@ const Residuos = props => {
       <br />
       <br />
       Sendo assim a área necessária para o biofiltro é de{" "}
-      <strong>{(props.nh3Ger / 0.0003).toFixed(2)} m2</strong>.
+      <strong>{(props.nh3Ger / 0.001).toFixed(2)} m²</strong>, ao utilizarmos um
+      fator de segurança 2 temos <strong>{area.toFixed(2)} m².</strong>
       <br />
       <br />
       Um substrato para fornecer área de superfície para bactérias nitrificantes
@@ -58,18 +56,16 @@ const Residuos = props => {
           }
         ]}
       />
-      <br />
-      <br />
       Podemos calcular o volume mínimo do biofiltro para remoção de toda matéria
       orgânica produzida, estabelecendo uma razão entre a área do biofiltro{" "}
       <strong>
-        {(props.nh3Ger / 0.0003).toFixed(2)}
-        m2
+        {area.toFixed(2)}
+        m²
       </strong>{" "}
-      e a área específica do bio-balls 1690 m2/m³. Deste modo o volume do
-      biofiltro é de{" "}
-      <strong>{(props.nh3Ger / 0.0003 / 1690).toFixed(2)}m³</strong>.
-      <Table
+      e a área específica do bio-balls 1690 m²/m³. <br /> <br /> Deste modo o
+      volume do biofiltro é de <strong>{volumeFiltro.toFixed(2)}m³</strong>
+      <br /> <br />
+      {/*<Table
         columns={[
           {
             title: "Produção de Amônia do Sistema",
@@ -134,22 +130,17 @@ const Residuos = props => {
           },
           {
             key: "5",
-            name: "Área (corte transversal)",
+            name: "Área Superficial",
             value: areaFiltro.toFixed(2) + " m²"
           },
           {
             key: "6",
-            name: "Diâmetro",
-            value: diametro.toFixed(2) + " m"
-          },
-          {
-            key: "7",
-            name: "Altura",
-            value: alturaFiltro.toFixed(2) + " m"
+            name: "Volume",
+            value: diametro.toFixed(2) + " m³"
           }
         ]}
         size="middle"
-      />
+      />*/}
     </Fragment>
   );
 };
