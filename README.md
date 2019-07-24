@@ -22,7 +22,7 @@ Aquascript é um software de dimensionamento de sistemas de recirculação para 
 ## Installation
 
 ```
-git clone https://github.com/devzunder/ras.git
+git clone https://github.com/lucaszunder/ras.git
 cd ras
 npm install
 npm start
