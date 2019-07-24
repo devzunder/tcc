@@ -30,4 +30,4 @@ npm start
 
 ## License
 
-MIT © [DevZunder](https://github.com/devzunder)
+MIT © [Lucas Zunder](https://github.com/lucaszunder)
